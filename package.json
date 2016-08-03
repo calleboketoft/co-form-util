@@ -1,6 +1,6 @@
 {
   "name": "co-form-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 2: Model driven form utils",
   "main": "index.js",
   "scripts": {
