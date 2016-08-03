@@ -1,14 +1,14 @@
 import {Component, Input} from '@angular/core'
 
 @Component({
-  selector: 'form-group',
+  selector: 'input-wrap',
   template: `
-    <div class="form-group" [class.has-danger]="!control.valid && !control.pristine && !wait">
+    <fieldset class="form-group" [class.has-danger]="!control.valid && !control.pristine && !wait">
       <ng-content></ng-content>
-    </div>
+    </fieldset>
   `
 })
-export class FormGroupComponent {
+export class InputWrapComponent {
   @Input() control;
   @Input() timeout: number = 0;
 

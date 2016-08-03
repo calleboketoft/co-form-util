@@ -4,14 +4,14 @@ import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/debounceTime'
 
 import {ErrorMessageComponent} from '../error-message.component'
-import {FormGroupComponent} from '../form-group.component'
+import {InputWrapComponent} from '../input-wrap.component'
 
 @Component({
   selector: 'app',
   directives: [
     REACTIVE_FORM_DIRECTIVES,
     ErrorMessageComponent,
-    FormGroupComponent
+    InputWrapComponent
   ],
   styles: [`
     .ng-valid {
@@ -28,7 +28,7 @@ import {FormGroupComponent} from '../form-group.component'
       <form [formGroup]="myForm" novalidate (ngSubmit)="submitMyForm(myForm)">
         <div class="row">
           <div class="col-xs-4">
-            <form-group [control]="myForm.controls.myName" [timeout]="1000">
+            <input-wrap [control]="myForm.controls.myName" [timeout]="1000">
               <label class="form-control-label">Name</label>
               <input type="text" class="form-control form-control-danger" formControlName="myName">
               <error-message [control]="myForm.controls.myName" [trigger]="'required'">
@@ -42,7 +42,7 @@ import {FormGroupComponent} from '../form-group.component'
                 [textClass]="'text-warning'">
                 Maximum 10 characters
               </error-message>
-            </form-group>
+            </input-wrap>
           </div>
           <div class="col-xs-4">
           </div>

@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var FormGroupComponent = (function () {
-    function FormGroupComponent() {
+var InputWrapComponent = (function () {
+    function InputWrapComponent() {
         this.timeout = 0;
         this.wait = true;
     }
-    FormGroupComponent.prototype.ngOnInit = function () {
+    InputWrapComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.control.valueChanges
             .map(function (val) {
@@ -27,19 +27,19 @@ var FormGroupComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], FormGroupComponent.prototype, "control", void 0);
+    ], InputWrapComponent.prototype, "control", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], FormGroupComponent.prototype, "timeout", void 0);
-    FormGroupComponent = __decorate([
+    ], InputWrapComponent.prototype, "timeout", void 0);
+    InputWrapComponent = __decorate([
         core_1.Component({
-            selector: 'form-group',
-            template: "\n    <div class=\"form-group\" [class.has-danger]=\"!control.valid && !control.pristine && !wait\">\n      <ng-content></ng-content>\n    </div>\n  "
+            selector: 'input-wrap',
+            template: "\n    <fieldset class=\"form-group\" [class.has-danger]=\"!control.valid && !control.pristine && !wait\">\n      <ng-content></ng-content>\n    </fieldset>\n  "
         }), 
         __metadata('design:paramtypes', [])
-    ], FormGroupComponent);
-    return FormGroupComponent;
+    ], InputWrapComponent);
+    return InputWrapComponent;
 }());
-exports.FormGroupComponent = FormGroupComponent;
-//# sourceMappingURL=form-group.component.js.map
+exports.InputWrapComponent = InputWrapComponent;
+//# sourceMappingURL=input-wrap.component.js.map

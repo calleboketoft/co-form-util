@@ -13,7 +13,7 @@ var forms_1 = require('@angular/forms');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/debounceTime');
 var error_message_component_1 = require('../error-message.component');
-var form_group_component_1 = require('../form-group.component');
+var input_wrap_component_1 = require('../input-wrap.component');
 var AppComponent = (function () {
     function AppComponent(formBuilder) {
         this.formBuilder = formBuilder;
@@ -36,10 +36,10 @@ var AppComponent = (function () {
             directives: [
                 forms_1.REACTIVE_FORM_DIRECTIVES,
                 error_message_component_1.ErrorMessageComponent,
-                form_group_component_1.FormGroupComponent
+                input_wrap_component_1.InputWrapComponent
             ],
             styles: ["\n    .ng-valid {\n      border-left: 5px solid #42A948; /* green */\n    }\n\n    .ng-invalid {\n      border-left: 5px solid #a94442; /* red */\n    }\n  "],
-            template: "\n    <div class=\"container\">\n      <h3>Form util examples</h3>\n      <form [formGroup]=\"myForm\" novalidate (ngSubmit)=\"submitMyForm(myForm)\">\n        <div class=\"row\">\n          <div class=\"col-xs-4\">\n            <form-group [control]=\"myForm.controls.myName\" [timeout]=\"1000\">\n              <label class=\"form-control-label\">Name</label>\n              <input type=\"text\" class=\"form-control form-control-danger\" formControlName=\"myName\">\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'required'\">\n                Required\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'minlength'\"\n                [timeout]=\"1000\">\n                Minimum 5 characters\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'maxlength'\"\n                [textClass]=\"'text-warning'\">\n                Maximum 10 characters\n              </error-message>\n            </form-group>\n          </div>\n          <div class=\"col-xs-4\">\n          </div>\n          <div class=\"col-xs-4\">\n            <button type=\"submit\" class=\"btn btn-success\">\n              Submit\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  "
+            template: "\n    <div class=\"container\">\n      <h3>Form util examples</h3>\n      <form [formGroup]=\"myForm\" novalidate (ngSubmit)=\"submitMyForm(myForm)\">\n        <div class=\"row\">\n          <div class=\"col-xs-4\">\n            <input-wrap [control]=\"myForm.controls.myName\" [timeout]=\"1000\">\n              <label class=\"form-control-label\">Name</label>\n              <input type=\"text\" class=\"form-control form-control-danger\" formControlName=\"myName\">\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'required'\">\n                Required\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'minlength'\"\n                [timeout]=\"1000\">\n                Minimum 5 characters\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'maxlength'\"\n                [textClass]=\"'text-warning'\">\n                Maximum 10 characters\n              </error-message>\n            </input-wrap>\n          </div>\n          <div class=\"col-xs-4\">\n          </div>\n          <div class=\"col-xs-4\">\n            <button type=\"submit\" class=\"btn btn-success\">\n              Submit\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], AppComponent);
