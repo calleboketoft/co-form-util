@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ErrorMessageComponent = (function () {
     function ErrorMessageComponent() {
+        this.textClass = 'text-danger';
         this.trigger = 'ALL_ERRORS';
         this.timeout = 0;
         this.errorTriggered = false;
@@ -42,6 +43,10 @@ var ErrorMessageComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
+    ], ErrorMessageComponent.prototype, "textClass", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], ErrorMessageComponent.prototype, "trigger", void 0);
     __decorate([
         core_1.Input(), 
@@ -50,7 +55,7 @@ var ErrorMessageComponent = (function () {
     ErrorMessageComponent = __decorate([
         core_1.Component({
             selector: 'error-message',
-            template: "\n    <small [hidden]=\"control.valid || control.pristine || wait || !errorTriggered\">\n      <ng-content></ng-content>\n    </small>\n  "
+            template: "\n    <small [class]=\"textClass\"\n      [hidden]=\"control.valid || control.pristine || wait || !errorTriggered\">\n      <ng-content></ng-content>\n    </small>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], ErrorMessageComponent);

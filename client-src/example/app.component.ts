@@ -25,7 +25,7 @@ import {FormGroupComponent} from '../form-group.component'
   template: `
     <div class="container">
       <h3>Form util examples</h3>
-      <form [formGroup]="myForm" (ngSubmit)="submitMyForm(myForm)">
+      <form [formGroup]="myForm" novalidate (ngSubmit)="submitMyForm(myForm)">
         <div class="row">
           <div class="col-xs-4">
             <form-group [control]="myForm.controls.myName" [timeout]="1000">
@@ -39,7 +39,7 @@ import {FormGroupComponent} from '../form-group.component'
                 Minimum 5 characters
               </error-message>
               <error-message [control]="myForm.controls.myName" [trigger]="'maxlength'"
-                [debounceTime]="0">
+                [textClass]="'text-warning'">
                 Maximum 10 characters
               </error-message>
             </form-group>
