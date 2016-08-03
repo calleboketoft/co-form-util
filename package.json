@@ -1,7 +1,7 @@
 {
   "name": "co-form-util",
   "version": "1.0.0",
-  "description": "",
+  "description": "Angular 2: Model driven form utils",
   "main": "index.js",
   "scripts": {
     "start": "node server",
@@ -21,8 +21,8 @@
     "type": "git",
     "url": "git+https://github.com/calleboketoft/co-form-util.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["angular2"],
+  "author": "Carl-Ola Boketoft",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/calleboketoft/co-form-util/issues"
