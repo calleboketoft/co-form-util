@@ -15,8 +15,11 @@ var ErrorMessageComponent = (function () {
         this.trigger = 'ALL_ERRORS';
         this.timeout = 0;
         this.errorTriggered = false;
-        this.wait = true;
+        this.wait = false;
     }
+    ErrorMessageComponent.prototype.ngOnChanges = function (changes) {
+        console.log(changes);
+    };
     ErrorMessageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.control.valueChanges

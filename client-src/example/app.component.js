@@ -24,11 +24,23 @@ var AppComponent = (function () {
                     forms_1.Validators.required,
                     forms_1.Validators.minLength(5),
                     forms_1.Validators.maxLength(10)
+                ]],
+            myColor: ['', [
+                    forms_1.Validators.required
                 ]]
         });
     };
     AppComponent.prototype.submitMyForm = function (myForm) {
-        console.log(myForm);
+        if (!myForm.valid) {
+            Object.keys(myForm.controls).forEach(function (controlKey) {
+                myForm.controls[controlKey].markAsDirty();
+                myForm.controls[controlKey].updateValueAndValidity();
+            });
+            alert('please fix validation errors');
+        }
+        else {
+            alert('form submission ok');
+        }
     };
     AppComponent = __decorate([
         core_1.Component({
@@ -39,7 +51,7 @@ var AppComponent = (function () {
                 input_wrap_component_1.InputWrapComponent
             ],
             styles: ["\n    .ng-valid {\n      border-left: 5px solid #42A948; /* green */\n    }\n\n    .ng-invalid {\n      border-left: 5px solid #a94442; /* red */\n    }\n  "],
-            template: "\n    <div class=\"container\">\n      <h3>Form util examples</h3>\n      <form [formGroup]=\"myForm\" novalidate (ngSubmit)=\"submitMyForm(myForm)\">\n        <div class=\"row\">\n          <div class=\"col-xs-4\">\n            <input-wrap [control]=\"myForm.controls.myName\" [timeout]=\"1000\">\n              <label class=\"form-control-label\">Name</label>\n              <input type=\"text\" class=\"form-control form-control-danger\" formControlName=\"myName\">\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'required'\">\n                Required\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'minlength'\"\n                [timeout]=\"1000\">\n                Minimum 5 characters\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'maxlength'\"\n                [textClass]=\"'text-warning'\">\n                Maximum 10 characters\n              </error-message>\n            </input-wrap>\n          </div>\n          <div class=\"col-xs-4\">\n          </div>\n          <div class=\"col-xs-4\">\n            <button type=\"submit\" class=\"btn btn-success\">\n              Submit\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  "
+            template: "\n    <div class=\"container\">\n      <h3>Form util examples</h3>\n      <form [formGroup]=\"myForm\" novalidate (ngSubmit)=\"submitMyForm(myForm)\">\n        <div class=\"row\">\n          <div class=\"col-xs-4\">\n            <input-wrap [control]=\"myForm.controls.myName\" [timeout]=\"1000\">\n              <label class=\"form-control-label\">Name</label>\n              <input type=\"text\" class=\"form-control form-control-danger\" formControlName=\"myName\">\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'required'\">\n                Required\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'minlength'\"\n                [timeout]=\"1000\">\n                Minimum 5 characters\n              </error-message>\n              <error-message [control]=\"myForm.controls.myName\" [trigger]=\"'maxlength'\"\n                [textClass]=\"'text-warning'\">\n                Maximum 10 characters\n              </error-message>\n            </input-wrap>\n          </div>\n          <div class=\"col-xs-4\">\n            <input-wrap [control]=\"myForm.controls.myColor\">\n              <label class=\"form-control-label\">Color</label>\n              <input type=\"text\" class=\"form-control form-control-danger\"\n                formControlName=\"myColor\">\n              <error-message [control]=\"myForm.controls.myColor\" [trigger]=\"'required'\">\n                Required\n              </error-message>\n            </input-wrap>\n          </div>\n          <div class=\"col-xs-4\">\n            <label class=\"form-control-label\">&nbsp;</label><br>\n            <button type=\"submit\" class=\"btn btn-success\">\n              Submit\n            </button>\n          </div>\n        </div>\n      </form>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [forms_1.FormBuilder])
     ], AppComponent);

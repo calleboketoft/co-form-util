@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var InputWrapComponent = (function () {
     function InputWrapComponent() {
         this.timeout = 0;
-        this.wait = true;
+        this.wait = false;
     }
     InputWrapComponent.prototype.ngOnInit = function () {
         var _this = this;

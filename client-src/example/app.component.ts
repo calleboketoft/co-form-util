@@ -45,8 +45,17 @@ import {InputWrapComponent} from '../input-wrap.component'
             </input-wrap>
           </div>
           <div class="col-xs-4">
+            <input-wrap [control]="myForm.controls.myColor">
+              <label class="form-control-label">Color</label>
+              <input type="text" class="form-control form-control-danger"
+                formControlName="myColor">
+              <error-message [control]="myForm.controls.myColor" [trigger]="'required'">
+                Required
+              </error-message>
+            </input-wrap>
           </div>
           <div class="col-xs-4">
+            <label class="form-control-label">&nbsp;</label><br>
             <button type="submit" class="btn btn-success">
               Submit
             </button>
@@ -67,11 +76,22 @@ export class AppComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
         Validators.maxLength(10)
+      ]],
+      myColor: ['', [
+        Validators.required
       ]]
     })
   }
 
   public submitMyForm (myForm) {
-    console.log(myForm)
+    if (!myForm.valid) {
+      Object.keys(myForm.controls).forEach(controlKey => {
+        myForm.controls[controlKey].markAsDirty()
+        myForm.controls[controlKey].updateValueAndValidity()
+      })
+      alert('please fix validation errors')
+    } else {
+      alert('form submission ok')
+    }
   }
 }

@@ -12,7 +12,7 @@ export class InputWrapComponent {
   @Input() control;
   @Input() timeout: number = 0;
 
-  public wait = true;
+  public wait = false;
 
   ngOnInit () {
     this.control.valueChanges
