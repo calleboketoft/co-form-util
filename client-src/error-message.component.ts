@@ -15,12 +15,8 @@ export class ErrorMessageComponent {
   @Input() trigger: string = 'ALL_ERRORS';
   @Input() timeout: number = 0;
 
-  public errorTriggered = false
-  public wait = false
-
-  ngOnChanges (changes) {
-    console.log(changes)
-  }
+  public errorTriggered = false;
+  public wait = false;
 
   ngOnInit () {
     this.control.valueChanges

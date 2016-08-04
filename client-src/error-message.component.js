@@ -17,9 +17,6 @@ var ErrorMessageComponent = (function () {
         this.errorTriggered = false;
         this.wait = false;
     }
-    ErrorMessageComponent.prototype.ngOnChanges = function (changes) {
-        console.log(changes);
-    };
     ErrorMessageComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.control.valueChanges
