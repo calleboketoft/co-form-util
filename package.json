@@ -1,7 +1,7 @@
 {
-  "name": "co-form-util",
-  "version": "1.0.2",
-  "description": "Angular 2: Model driven form utils",
+  "name": "ng2-form-tools",
+  "version": "1.0.3",
+  "description": "Angular 2: Custom tools for model driven forms",
   "main": "index.js",
   "scripts": {
     "start": "node server",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calleboketoft/co-form-util.git"
+    "url": "git+https://github.com/calleboketoft/ng2-form-tools.git"
   },
   "keywords": [
     "angular2"
@@ -27,9 +27,9 @@
   "author": "Carl-Ola Boketoft",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/calleboketoft/co-form-util/issues"
+    "url": "https://github.com/calleboketoft/ng2-form-tools/issues"
   },
-  "homepage": "https://github.com/calleboketoft/co-form-util#readme",
+  "homepage": "https://github.com/calleboketoft/ng2-form-tools#readme",
   "peerDependencies": {
     "@angular/core": "^2.0.0-rc.5",
     "@angular/forms": "^0.3.0"

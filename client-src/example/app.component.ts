@@ -1,18 +1,10 @@
 import {Component, OnInit} from '@angular/core'
-import {FormBuilder, REACTIVE_FORM_DIRECTIVES, Validators} from '@angular/forms'
+import {FormBuilder, Validators} from '@angular/forms'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/debounceTime'
 
-import {ErrorMessageComponent} from '../error-message.component'
-import {InputWrapComponent} from '../input-wrap.component'
-
 @Component({
   selector: 'app',
-  directives: [
-    REACTIVE_FORM_DIRECTIVES,
-    ErrorMessageComponent,
-    InputWrapComponent
-  ],
   styles: [`
     .ng-valid {
       border-left: 5px solid #42A948; /* green */

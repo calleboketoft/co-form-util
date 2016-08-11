@@ -7,7 +7,7 @@ System.config({
     'rxjs': 'node_modules/rxjs'
   },
   packages: {
-    'client-src': {defaultExtension: 'js'},
+    '': {defaultExtension: 'js', main: 'index.js'},
     'rxjs': {defaultExtension: 'js'},
     '@angular/common': {defaultExtension: 'js', main: 'index.js'},
     '@angular/compiler': {defaultExtension: 'js', main: 'index.js'},

@@ -9,26 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var form_tools_module_1 = require('../form-tools.module');
-var AppModule = (function () {
-    function AppModule() {
+var error_message_component_1 = require('./error-message.component');
+var input_wrap_component_1 = require('./input-wrap.component');
+var FormToolsModule = (function () {
+    function FormToolsModule() {
     }
-    AppModule = __decorate([
+    FormToolsModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
-            imports: [
-                forms_1.ReactiveFormsModule,
-                platform_browser_1.BrowserModule,
-                form_tools_module_1.FormToolsModule
+            declarations: [
+                error_message_component_1.ErrorMessageComponent,
+                input_wrap_component_1.InputWrapComponent
             ],
-            bootstrap: [app_component_1.AppComponent],
+            exports: [
+                error_message_component_1.ErrorMessageComponent,
+                input_wrap_component_1.InputWrapComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], FormToolsModule);
+    return FormToolsModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.FormToolsModule = FormToolsModule;
+//# sourceMappingURL=form-tools.module.js.map
