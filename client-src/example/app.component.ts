@@ -6,11 +6,11 @@ import 'rxjs/add/operator/debounceTime'
 @Component({
   selector: 'app',
   styles: [`
-    .ng-valid {
+    input.ng-valid {
       border-left: 5px solid #42A948; /* green */
     }
 
-    .ng-invalid {
+    input.ng-invalid {
       border-left: 5px solid #a94442; /* red */
     }
   `],
