@@ -9,10 +9,10 @@ import {Component, Input} from '@angular/core'
   `
 })
 export class InputWrapComponent {
-  @Input() control;
-  @Input() timeout: number = 0;
+  @Input() control
+  @Input() timeout: number = 0
 
-  public wait = false;
+  public wait = false
 
   ngOnInit () {
     this.control.valueChanges
