@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var InputWrapComponent = (function () {
     function InputWrapComponent() {
         this.timeout = 0;
@@ -24,22 +24,22 @@ var InputWrapComponent = (function () {
             .debounceTime(this.timeout)
             .subscribe(function (val) { return _this.wait = false; });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputWrapComponent.prototype, "control", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], InputWrapComponent.prototype, "timeout", void 0);
-    InputWrapComponent = __decorate([
-        core_1.Component({
-            selector: 'input-wrap',
-            template: "\n    <fieldset class=\"form-group\" [class.has-danger]=\"!control.valid && !control.pristine && !wait\">\n      <ng-content></ng-content>\n    </fieldset>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], InputWrapComponent);
     return InputWrapComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputWrapComponent.prototype, "control", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], InputWrapComponent.prototype, "timeout", void 0);
+InputWrapComponent = __decorate([
+    core_1.Component({
+        selector: 'input-wrap',
+        template: "\n    <fieldset class=\"form-group\" [class.has-danger]=\"!control.valid && !control.pristine && !wait\">\n      <ng-content></ng-content>\n    </fieldset>\n  "
+    }),
+    __metadata("design:paramtypes", [])
+], InputWrapComponent);
 exports.InputWrapComponent = InputWrapComponent;
 //# sourceMappingURL=input-wrap.component.js.map

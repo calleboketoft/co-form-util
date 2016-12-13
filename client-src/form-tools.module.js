@@ -8,26 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var error_message_component_1 = require('./error-message.component');
-var input_wrap_component_1 = require('./input-wrap.component');
+var core_1 = require("@angular/core");
+var error_message_component_1 = require("./error-message.component");
+var input_wrap_component_1 = require("./input-wrap.component");
 var FormToolsModule = (function () {
     function FormToolsModule() {
     }
-    FormToolsModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                error_message_component_1.ErrorMessageComponent,
-                input_wrap_component_1.InputWrapComponent
-            ],
-            exports: [
-                error_message_component_1.ErrorMessageComponent,
-                input_wrap_component_1.InputWrapComponent
-            ]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], FormToolsModule);
     return FormToolsModule;
 }());
+FormToolsModule = __decorate([
+    core_1.NgModule({
+        declarations: [
+            error_message_component_1.ErrorMessageComponent,
+            input_wrap_component_1.InputWrapComponent
+        ],
+        exports: [
+            error_message_component_1.ErrorMessageComponent,
+            input_wrap_component_1.InputWrapComponent
+        ]
+    }),
+    __metadata("design:paramtypes", [])
+], FormToolsModule);
 exports.FormToolsModule = FormToolsModule;
 //# sourceMappingURL=form-tools.module.js.map

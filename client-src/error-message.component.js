@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var ErrorMessageComponent = (function () {
     function ErrorMessageComponent() {
         this.textClass = 'text-danger';
@@ -36,30 +36,30 @@ var ErrorMessageComponent = (function () {
             .debounceTime(this.timeout)
             .subscribe(function (val) { return _this.wait = false; });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ErrorMessageComponent.prototype, "control", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ErrorMessageComponent.prototype, "textClass", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ErrorMessageComponent.prototype, "trigger", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], ErrorMessageComponent.prototype, "timeout", void 0);
-    ErrorMessageComponent = __decorate([
-        core_1.Component({
-            selector: 'error-message',
-            template: "\n    <small [class]=\"textClass\"\n      [hidden]=\"control.valid || control.pristine || wait || !errorTriggered\">\n      <ng-content></ng-content>\n    </small>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ErrorMessageComponent);
     return ErrorMessageComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], ErrorMessageComponent.prototype, "control", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ErrorMessageComponent.prototype, "textClass", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ErrorMessageComponent.prototype, "trigger", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ErrorMessageComponent.prototype, "timeout", void 0);
+ErrorMessageComponent = __decorate([
+    core_1.Component({
+        selector: 'error-message',
+        template: "\n    <small [class]=\"textClass\"\n      [hidden]=\"control.valid || control.pristine || wait || !errorTriggered\">\n      <ng-content></ng-content>\n    </small>\n  "
+    }),
+    __metadata("design:paramtypes", [])
+], ErrorMessageComponent);
 exports.ErrorMessageComponent = ErrorMessageComponent;
 //# sourceMappingURL=error-message.component.js.map
