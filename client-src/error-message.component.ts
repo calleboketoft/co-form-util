@@ -10,13 +10,13 @@ import {Component, Input} from '@angular/core'
   `
 })
 export class ErrorMessageComponent {
-  @Input() control;
-  @Input() textClass: string = 'text-danger';
-  @Input() trigger: string = 'ALL_ERRORS';
-  @Input() timeout: number = 0;
+  @Input() control
+  @Input() textClass: string = 'text-danger'
+  @Input() trigger: string = 'ALL_ERRORS'
+  @Input() timeout: number = 0
 
-  public errorTriggered = false;
-  public wait = false;
+  public errorTriggered = false
+  public wait = false
 
   ngOnInit () {
     this.control.valueChanges

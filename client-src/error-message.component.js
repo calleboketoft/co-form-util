@@ -58,8 +58,7 @@ ErrorMessageComponent = __decorate([
     core_1.Component({
         selector: 'error-message',
         template: "\n    <small [class]=\"textClass\"\n      [hidden]=\"control.valid || control.pristine || wait || !errorTriggered\">\n      <ng-content></ng-content>\n    </small>\n  "
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], ErrorMessageComponent);
 exports.ErrorMessageComponent = ErrorMessageComponent;
 //# sourceMappingURL=error-message.component.js.map

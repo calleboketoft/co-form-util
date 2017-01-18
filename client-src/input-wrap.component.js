@@ -38,8 +38,7 @@ InputWrapComponent = __decorate([
     core_1.Component({
         selector: 'input-wrap',
         template: "\n    <fieldset class=\"form-group\" [class.has-danger]=\"!control.valid && !control.pristine && !wait\">\n      <ng-content></ng-content>\n    </fieldset>\n  "
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], InputWrapComponent);
 exports.InputWrapComponent = InputWrapComponent;
 //# sourceMappingURL=input-wrap.component.js.map

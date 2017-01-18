@@ -11,6 +11,6 @@ import { FormToolsModule } from '../form-tools.module'
     BrowserModule,
     FormToolsModule
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

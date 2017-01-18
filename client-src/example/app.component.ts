@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core'
-import {FormBuilder, Validators} from '@angular/forms'
+import { Component, OnInit } from '@angular/core'
+import { FormBuilder, Validators } from '@angular/forms'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/debounceTime'
 
@@ -58,11 +58,12 @@ import 'rxjs/add/operator/debounceTime'
   `
 })
 export class AppComponent implements OnInit {
+
+  public myForm
+
   constructor (public formBuilder: FormBuilder) {}
 
-  public myForm;
-
-  ngOnInit () {
+  public ngOnInit () {
     this.myForm = this.formBuilder.group({
       myName: ['', [
         Validators.required,
